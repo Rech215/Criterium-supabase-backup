@@ -156,7 +156,7 @@ class AppProvider extends ChangeNotifier {
         // ==========================================
         // 🟢 MODO PRODUCCIÓN: CONEXIÓN REAL AL API
         // ==========================================
-        final baseUrl = dotenv.env['API_URL'] ?? 'http://10.0.2.2:5074/api';
+        final baseUrl = dotenv.env['API_URL'] ?? 'https://criterium-project-production.up.railway.app/api';
         final response = await http.get(Uri.parse('$baseUrl/App/Data'));
 
         if (response.statusCode == 200) {

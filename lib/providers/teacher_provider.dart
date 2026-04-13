@@ -68,7 +68,7 @@ class TeacherProvider extends ChangeNotifier {
           },
         ];
 
-        final baseUrl = dotenv.env['API_URL'] ?? 'http://10.0.2.2:5074/api';
+        final baseUrl = dotenv.env['API_URL'] ?? 'https://criterium-project-production.up.railway.app/api';
         final response = await http.get(Uri.parse('$baseUrl/Assignments'));
 
         if (response.statusCode == 200) {
@@ -140,7 +140,7 @@ class TeacherProvider extends ChangeNotifier {
         (c) => c['name'] == className,
         orElse: () => {'id': '65d4f9c2a1c3000000000000'},
       );
-      final baseUrl = dotenv.env['API_URL'] ?? 'http://10.0.2.2:5074/api';
+      final baseUrl = dotenv.env['API_URL'] ?? 'https://criterium-project-production.up.railway.app/api';
       final url = Uri.parse('$baseUrl/Assignments');
 
       final response = await http.post(
